@@ -1,8 +1,15 @@
 const express = require('express')
 const app = express()
+const connectDatabase = require('./src/database/db') 
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+const userRoute = require('./src/routes/user.route')
+const port = 3000
 
-app.listen(3000)
+connectDatabase()
+app.use(express.json())
+
+app.use('/user', userRoute)
+
+
+
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
