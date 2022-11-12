@@ -1,0 +1,16 @@
+{
+  "name": "inventory-control",
+  "version": "1.0.0",
+  "description": "Inventory Control ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Oséias Costa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
